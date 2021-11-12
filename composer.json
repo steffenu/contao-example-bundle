@@ -1,0 +1,19 @@
+{
+    "name": "steffenu/contao-example-bundle",
+    "description": "lorem",
+    "type": "contao-bundle",
+    "require": {
+        "contao/core-bundle": "^4.9"
+    },
+    "license": "LGPL-3.3-or-later",
+    
+    "autoload": {
+        "psr-4": {
+            "Steffenu\\ContaoExampleBundle\\": "src/"
+        }
+    },
+        "extra": {
+             "contao-manager-plugin": "Steffenu\\ContaoExampleBundle\\ContaoManager\\Plugin"
+        }
+
+}
