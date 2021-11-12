@@ -85,7 +85,7 @@ $GLOBALS['TL_DCA']['tl_my_module_1'] = array(
 			'sql' => "int(10) unsigned NOT NULL default '0'"
 		),
 		'title'          => array(
-			'inputType' => 'text',
+			'inputType' => 'custom_widget',
 			'exclude'   => true,
 			'search'    => true,
 			'filter'    => true,
