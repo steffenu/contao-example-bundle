@@ -14,11 +14,3 @@ use Steffenu\ContaoExampleBundle\Widget\Backend\CustomWidget;
 $GLOBALS['BE_MOD']['steffen_modules']['my_module_1'] = array(
 	'tables' => array('tl_my_module_1')
 );
-
-/* 
-* Widget
-*/
-
-
-
-$GLOBALS['BE_FFL']['custom_widget'] = CustomWidget::class;
