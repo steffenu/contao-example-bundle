@@ -1,0 +1,19 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: true
+    bind:
+      #$projectDir: '%kernel.project_dir%'
+
+  _instanceof:
+    Symfony\Bundle\FrameworkBundle\Controller\AbstractController:
+      calls:
+        - [ setContainer, [ '@service_container' ] ]
+
+  Medy\ContaoMyTest\:
+    resource: ../../
+    exclude: ../../{DependencyInjection,Resources,Model}
+
+
+
