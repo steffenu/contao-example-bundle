@@ -1,0 +1,31 @@
+services:
+
+    # Contao frontend module Steffenu\StarterBundle\Controller\FrontendModule\StarterFrontendCollectionController
+    # We used annotations for tagging the frontend module category, the frontend module type and the frontend module template
+    Steffenu\StarterBundle\Controller\FrontendModule\StarterFrontendCollectionController:
+        tags:
+            - { name: container.service_subscriber }
+        public: true
+        # Since Symfony 5 the container has to be set manually
+        calls:
+            - [ setContainer, [ '@Psr\Container\ContainerInterface' ] ]
+    
+    # Contao content element Steffenu\StarterBundle\Controller\ContentElement\TestElementController
+    # We used annotations for tagging the frontend element category, the frontend element type and the frontend element template
+    Steffenu\StarterBundle\Controller\ContentElement\TestElementController:
+        tags:
+            - { name: container.service_subscriber }
+        public: true
+        # Since Symfony 5 the container has to be set manually
+        calls:
+            - [ setContainer, [ '@Psr\Container\ContainerInterface' ] ]
+    # Custom route
+    Steffenu\StarterBundle\Controller\MyCustomController:
+        arguments:
+            - '@twig'
+        public: true
+        # Since Symfony 5 the container has to be set manually
+        calls:
+            - [ setContainer, [ '@Psr\Container\ContainerInterface' ] ]
+    
+

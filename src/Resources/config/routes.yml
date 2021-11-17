@@ -1,0 +1,4 @@
+# config/routes.yml
+steffenu_starter.controller:
+    resource: ../../../src/Controller
+    type: annotation

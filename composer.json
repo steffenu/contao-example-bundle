@@ -1,0 +1,52 @@
+{
+    "name": "steffenu/starter-bundle",
+    "description": "Starter Bundle mit Backend , Frontend Modul und mehr.",
+    "keywords": [
+        "contao",
+        "bundle",
+        "tag 3",
+        "tag 4"
+    ],
+    "type": "contao-bundle",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Steffen Unger",
+            "email": "steffen.development@gmail.com",
+            "homepage": "https://github.com/steffenu",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/steffenu/starter-bundle/issues",
+        "source": "https://github.com/steffenu/starter-bundle"
+    },
+    "require": {
+        "contao/core-bundle": "^4.9"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.3",
+        "contao/test-case": "^4.0",
+        "phpunit/phpunit": "^8.4",
+        "symfony/http-client": "4.4.*",
+        "symfony/phpunit-bridge": "4.4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Steffenu\\StarterBundle\\": "src/"
+        },
+        "classmap": [
+            "src/Resources/contao"
+        ],
+        "exclude-from-classmap": [
+            "src/Resources/contao/config",
+            "src/Resources/contao/dca",
+            "src/Resources/contao/languages",
+            "src/Resources/contao/templates"
+        ]
+    },
+    "extra": {
+        "contao-manager-plugin": "Steffenu\\StarterBundle\\ContaoManager\\Plugin"
+    },
+    "version": "1.0"
+}
